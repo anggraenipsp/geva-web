@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gevarattan - Home Page</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">G</div>
+        <ul class="nav-links">
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <div class="menu">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About Us">About Us</a></li>
+                <li><a href="#Gallery">Gallery</a></li>
+                <li><a href="#Product">Product</a></li>
+                <li><a href="#Team">Team</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </div>
+        </ul>
+    </nav>
+    <header id="Home">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="https://i.postimg.cc/T1r8kNYg/header-image-1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="https://i.postimg.cc/YqHB47b3/header-image-2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="https://i.postimg.cc/tRftDRL3/header-image-3.jpg" style="width:100%">
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+
+    </header>
+    <main>
+        <div id="content">
+            <div id="Home">
+
+            </div>
+            <div id="About Us">
+                <h1> ABOUT US</h1>
+                <h2>Simply great & crafted by hand</h2>
+                <p>geva's concept is bringing timeless and natural beauty to your home, where the birth of GEVA is
+                    result of love and appreciation towards rattan and the local craftmanship in Indonesia who that our
+                    existence will bring positive impatcs to people around us as to support and boost economic the
+                    growth of local Rattan's community. The pro</p>
+            </div>
+            <div id="Gallery">
+
+            </div>
+            <div id="Product">
+
+            </div>
+            <div id="Team">
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="Contact">
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
