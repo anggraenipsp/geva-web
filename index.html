@@ -25,69 +25,81 @@
             </div>
         </ul>
     </nav>
-    <header id="Home">
-        <div class="slideshow-container">
+    <header>
+        <div class="Home">
+            <div class="slideshow-container">
+                <p>THE BEAUTY OF RATTAN</p>
+                <div class="mySlides fade">
+                    <img src="https://i.postimg.cc/T1r8kNYg/header-image-1.jpg" style="width:100%">
+                </div>
 
-            <div class="mySlides fade">
-                <img src="https://i.postimg.cc/T1r8kNYg/header-image-1.jpg" style="width:100%">
+                <div class="mySlides fade">
+                    <img src="https://i.postimg.cc/YqHB47b3/header-image-2.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="https://i.postimg.cc/tRftDRL3/header-image-3.jpg" style="width:100%">
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
             </div>
 
-            <div class="mySlides fade">
-                <img src="https://i.postimg.cc/YqHB47b3/header-image-2.jpg" style="width:100%">
-            </div>
+            <script>
+                let slideIndex = 0;
+                showSlides();
 
-            <div class="mySlides fade">
-                <img src="https://i.postimg.cc/tRftDRL3/header-image-3.jpg" style="width:100%">
-            </div>
-            <br>
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
+                function showSlides() {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) { slideIndex = 1 }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+            </script>
         </div>
-
-        <script>
-            let slideIndex = 0;
-            showSlides();
-
-            function showSlides() {
-                let i;
-                let slides = document.getElementsByClassName("mySlides");
-                let dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) { slideIndex = 1 }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-                setTimeout(showSlides, 2000); // Change image every 2 seconds
-            }
-        </script>
-
     </header>
     <main>
         <div id="content">
-            <div id="Home">
-
-            </div>
             <div id="About Us">
-                <h1> ABOUT US</h1>
-                <h2>Simply great & crafted by hand</h2>
+                <h2> ABOUT US</h2>
+                <h1>Simply great & crafted by hand</h1>
                 <p>geva's concept is bringing timeless and natural beauty to your home, where the birth of GEVA is
                     result of love and appreciation towards rattan and the local craftmanship in Indonesia who that our
                     existence will bring positive impatcs to people around us as to support and boost economic the
-                    growth of local Rattan's community. The pro</p>
+                    growth of local Rattan's community. The products are handcrafted from natural materials, chosen with
+                    consideration for the environment and the planet we all share. There is nothing more personal than
+                    decorationg your home and choosing the right piece of home decor to fit the look you have envisioned
+                </p>
+                <p><a href="https://drive.google.com/file/d/1tm8CQXm8ambS2r1JOTQ-H09Yd9V6s5xF/view?usp=drive_link"
+                        target="_blank">About More</a></p>
             </div>
             <div id="Gallery">
-
+                <h1>Gallery</h1>
             </div>
             <div id="Product">
+                <h1>Sharing The Heritage</h1>
+                <p> ljdlaksjdlas</p>
 
+                <iframe width="420" height="315" src="https://www.youtube.com/embed/i533XFbBqiU"></iframe>
+                <h1>DOWNLOAD</h1>
+                <a href="https://drive.google.com/file/d/1HAAZQCZWX3IFIhGhwBlOF4S5TPD5jdSS/view?usp=sharing"
+                    target="_blank"><button type="button">DOWNLOAD CATALOGUE</button></a>
+                <br>
+                <a href="https://drive.google.com/file/d/1ctYSXl1NDMV6yZCwmw1s3bJXPh6SAZpY/view?usp=sharing"
+                    taget="_blank"><button type="button">DOWNLOAD PRODUCT SHEET</button></a>
             </div>
             <div id="Team">
 
@@ -96,10 +108,9 @@
     </main>
     <footer>
         <div id="Contact">
-
+            <p>Surabaya - Indonesia</p>
+            <p>The Rattan &#169; 2023, Gevarattan</p>
         </div>
     </footer>
-
 </body>
-
 </html>
