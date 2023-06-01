@@ -29,15 +29,16 @@
         <div class="Home">
             <div class="slideshow-container">
                 <p>THE BEAUTY OF RATTAN</p>
-                <div class="mySlides fade">
+                <p>Creating a timeless beauty for your home</p>
+                <div class="slides fade">
                     <img src="https://i.postimg.cc/T1r8kNYg/header-image-1.jpg" style="width:100%">
                 </div>
 
-                <div class="mySlides fade">
+                <div class="slides fade">
                     <img src="https://i.postimg.cc/YqHB47b3/header-image-2.jpg" style="width:100%">
                 </div>
 
-                <div class="mySlides fade">
+                <div class="slides fade">
                     <img src="https://i.postimg.cc/tRftDRL3/header-image-3.jpg" style="width:100%">
                 </div>
                 <br>
@@ -54,7 +55,7 @@
 
                 function showSlides() {
                     let i;
-                    let slides = document.getElementsByClassName("mySlides");
+                    let slides = document.getElementsByClassName("slides");
                     let dots = document.getElementsByClassName("dot");
                     for (i = 0; i < slides.length; i++) {
                         slides[i].style.display = "none";
@@ -66,9 +67,12 @@
                     }
                     slides[slideIndex - 1].style.display = "block";
                     dots[slideIndex - 1].className += " active";
-                    setTimeout(showSlides, 2000); // Change image every 2 seconds
+                    setTimeout(showSlides, 3000); 
                 }
             </script>
+            <h1>Natural Rattan Home Decor</h1>
+            <p>Each handcrafted unique pieces of our home decor are crafted by our local artisans. Our rattan home decor
+                will be the final piece to enhance the aesthetic of any room</p>
         </div>
     </header>
     <main>
@@ -76,7 +80,7 @@
             <div id="About Us">
                 <h2> ABOUT US</h2>
                 <h1>Simply great & crafted by hand</h1>
-                <p>geva's concept is bringing timeless and natural beauty to your home, where the birth of GEVA is
+                <p>Geva's concept is bringing timeless and natural beauty to your home, where the birth of GEVA is
                     result of love and appreciation towards rattan and the local craftmanship in Indonesia who that our
                     existence will bring positive impatcs to people around us as to support and boost economic the
                     growth of local Rattan's community. The products are handcrafted from natural materials, chosen with
@@ -88,29 +92,44 @@
             </div>
             <div id="Gallery">
                 <h1>Gallery</h1>
+                <p>Discover range of our product. Our product is rattan which is processed into furniture and home decor
+                    with quality and the use of high quality materials.</p>
             </div>
             <div id="Product">
                 <h1>Sharing The Heritage</h1>
-                <p> ljdlaksjdlas</p>
+                <p>One of many pleasures of living in Indonesia is having opportunity to learn about and know better
+                    Indonesian arts and handicrafts.</p>
+                <br>
+                <p>We are excited to share the heritage through the making of rattan. Support the local artisans also to
+                    preserve Indonesia heritage</p>
 
                 <iframe width="420" height="315" src="https://www.youtube.com/embed/i533XFbBqiU"></iframe>
-                <h1>DOWNLOAD</h1>
-                <a href="https://drive.google.com/file/d/1HAAZQCZWX3IFIhGhwBlOF4S5TPD5jdSS/view?usp=sharing"
-                    target="_blank"><button type="button">DOWNLOAD CATALOGUE</button></a>
                 <br>
-                <a href="https://drive.google.com/file/d/1ctYSXl1NDMV6yZCwmw1s3bJXPh6SAZpY/view?usp=sharing"
-                    taget="_blank"><button type="button">DOWNLOAD PRODUCT SHEET</button></a>
+
+                <h1>DOWNLOAD</h1>
+                <a href="/assets/CATALOGUE .pdf" download="CATALOGUE">
+                    <button type="button">DOWNLOAD CATALOGUE</button>
+                </a>
+                <br>
+                <a href="/assets/PRICELIST GEVA .pdf" download="PRICELIST">
+                    <button type="button">DOWNLOAD PRODUCT SHEET</button>
+                </a>
             </div>
             <div id="Team">
-
+                <p>Eka Nurhana Via (0106012010231)</p>
+                <p>Kelas GMS-D</p>
+            </div>
+            <div id="Contact">
+                <div class="logo">G</div>
+                <p>Surabaya, Indonesia</p>
+                <p>+62 8517 1208 085</p>
+                <p>gevafurniture@gmail.com</p>
             </div>
         </div>
     </main>
     <footer>
-        <div id="Contact">
-            <p>Surabaya - Indonesia</p>
-            <p>The Rattan &#169; 2023, Gevarattan</p>
-        </div>
+        <p>Copyright &#169; 2023 Geva Rattan | Home Decor. All Rights Reserved.</p>
     </footer>
 </body>
+
 </html>
