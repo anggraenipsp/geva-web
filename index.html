@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gevarattan - Home Page</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/cc4885a691.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -28,107 +29,314 @@
     <header>
         <div class="Home">
             <div class="slideshow-container">
-                <p>THE BEAUTY OF RATTAN</p>
-                <p>Creating a timeless beauty for your home</p>
                 <div class="slides fade">
-                    <img src="https://i.postimg.cc/T1r8kNYg/header-image-1.jpg" style="width:100%">
+                    <img class="img-header" src="https://i.postimg.cc/T1r8kNYg/header-image-1.jpg">
+                    <div class="text">
+                        <h1 style="font-weight: lighter;">THE BEAUTY OF RATTAN</h1>
+                        <br>
+                        <p style="font-family: 'Montserrat', sans-serif; font-weight:ligher; font-size: small;">Creating
+                            a timeless beauty your home</p>
+                    </div>
                 </div>
-
                 <div class="slides fade">
-                    <img src="https://i.postimg.cc/YqHB47b3/header-image-2.jpg" style="width:100%">
+                    <img class="img-header" src="https://i.postimg.cc/YqHB47b3/header-image-2.jpg">
+                    <div class="text">
+                        <h1 style="font-weight: lighter;">THE BEAUTY OF RATTAN</h1>
+                        <br>
+                        <p style="font-family: 'Montserrat', sans-serif; font-weight:ligher; font-size: small;">Creating
+                            a timeless beauty your home</p>
+                    </div>
                 </div>
-
                 <div class="slides fade">
-                    <img src="https://i.postimg.cc/tRftDRL3/header-image-3.jpg" style="width:100%">
-                </div>
-                <br>
-                <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <img class="img-header" src="https://i.postimg.cc/tRftDRL3/header-image-3.jpg">
+                    <div class="text">
+                        <h1 style="font-weight: lighter;">THE BEAUTY OF RATTAN</h1>
+                        <br>
+                        <p style="font-family: 'Montserrat', sans-serif; font-weight:ligher; font-size: small;">Creating
+                            a timeless beauty your home</p>
+                    </div>
                 </div>
             </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <script>
+            let slideIndex = 0;
+            showSlides();
 
-            <script>
-                let slideIndex = 0;
-                showSlides();
-
-                function showSlides() {
-                    let i;
-                    let slides = document.getElementsByClassName("slides");
-                    let dots = document.getElementsByClassName("dot");
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    slideIndex++;
-                    if (slideIndex > slides.length) { slideIndex = 1 }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                    }
-                    slides[slideIndex - 1].style.display = "block";
-                    dots[slideIndex - 1].className += " active";
-                    setTimeout(showSlides, 3000); 
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("slides");
+                let dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
                 }
-            </script>
-            <h1>Natural Rattan Home Decor</h1>
-            <p>Each handcrafted unique pieces of our home decor are crafted by our local artisans. Our rattan home decor
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 3000);
+            } 
+        </script>
+        <br><br><br><br><br><br><br><br>
+        <div style="margin-inline: 16px;">
+            <h1 style="text-align: center; font-weight:500;"><i>Natural Rattan Home Decor</i></h1>
+            <br>
+            <p
+                style="text-align: center; color: rgb(131, 131, 131); font-family: 'Montserrat', sans-serif; font-weight: lighter;">
+                Each handcrafted unique pieces of our home decor are crafted by our local artisans. Our rattan home
+                decor
                 will be the final piece to enhance the aesthetic of any room</p>
+            <br><br><br><br><br>
         </div>
     </header>
     <main>
-        <div id="content">
+        <div id="content" style="margin-inline: 16px;">
+            <br><br><br><br><br>
             <div id="About Us">
-                <h2> ABOUT US</h2>
-                <h1>Simply great & crafted by hand</h1>
-                <p>Geva's concept is bringing timeless and natural beauty to your home, where the birth of GEVA is
+                <img class="img-aboutUs" src="https://i.postimg.cc/4d4v27Kn/About.jpg"
+                    style="margin: auto; display:block; filter: brightness(100%)">
+                <br><br>
+                <p style="font-family: 'Montserrat', sans-serif; font-weight:normal; font-size: small;"> ABOUT US</p>
+                <br>
+                <h1 style="font-weight:500;">Simply great & crafted by hand</h1>
+                <br><br>
+                <p style="color: rgb(131, 131, 131); font-family: 'Montserrat', sans-serif; font-weight: lighter;">
+                    Geva's concept is bringing timeless and natural beauty to your home, where the birth of GEVA is
                     result of love and appreciation towards rattan and the local craftmanship in Indonesia who that our
                     existence will bring positive impatcs to people around us as to support and boost economic the
                     growth of local Rattan's community. The products are handcrafted from natural materials, chosen with
                     consideration for the environment and the planet we all share. There is nothing more personal than
                     decorationg your home and choosing the right piece of home decor to fit the look you have envisioned
                 </p>
-                <p><a href="https://drive.google.com/file/d/1tm8CQXm8ambS2r1JOTQ-H09Yd9V6s5xF/view?usp=drive_link"
+                <p style="color: rgb(167, 167, 167); font-family: 'Montserrat', sans-serif; font-weight: lighter;"><a
+                        href="https://drive.google.com/file/d/1tm8CQXm8ambS2r1JOTQ-H09Yd9V6s5xF/view?usp=drive_link"
                         target="_blank">About More</a></p>
+                <br><br><br>
             </div>
             <div id="Gallery">
-                <h1>Gallery</h1>
-                <p>Discover range of our product. Our product is rattan which is processed into furniture and home decor
-                    with quality and the use of high quality materials.</p>
+                <h1 style="text-align: center; font-weight:500;">Gallery</h1>
+                <br>
+                <p
+                    style="color: rgb(131, 131, 131); font-family: 'Montserrat', sans-serif; font-weight: lighter; text-align: center;">
+                    Discover range of our product. Our product is rattan which is processed into furniture and home
+                    decor with quality and the use of high quality materials.</p>
+
+                <br>
+
+                <div class="container">
+
+                    <!-- Full-width images with number text -->
+                    <div class="mySlides">
+                        <img src="https://i.postimg.cc/28dNRy2r/Gallery-1.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="https://i.postimg.cc/C1n9vxRy/Gallery-2.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="https://i.postimg.cc/bN9WVMwv/Gallery-3.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="https://i.postimg.cc/g0TfqZkq/Gallery-4.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="https://i.postimg.cc/Pxdd9ZkG/Gallery-5.jpg" style="width:100%">
+                    </div>
+
+
+                    <div class="non-slide">
+                        <img src="https://i.postimg.cc/C1n9vxRy/Gallery-2.jpg" style="width:100%">
+                    </div>
+
+                    <div class="non-slide">
+                        <img src="https://i.postimg.cc/bN9WVMwv/Gallery-3.jpg" style="width:100%">
+                    </div>
+
+                    <div class="non-slide">
+                        <img src="https://i.postimg.cc/g0TfqZkq/Gallery-4.jpg" style="width:100%">
+                    </div>
+
+                    <div class="non-slide">
+                        <img src="https://i.postimg.cc/Pxdd9ZkG/Gallery-5.jpg" style="width:100%">
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+                    <!-- Thumbnail images -->
+                    <div class="row">
+                        <div class="column">
+                            <img class="demo cursor" src="https://i.postimg.cc/28dNRy2r/Gallery-1.jpg"
+                                style="width:100%" onclick="currentSlide(1)">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="https://i.postimg.cc/C1n9vxRy/Gallery-2.jpg"
+                                style="width:100%" onclick="currentSlide(2)">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="https://i.postimg.cc/bN9WVMwv/Gallery-3.jpg"
+                                style="width:100%" onclick="currentSlide(3)">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="https://i.postimg.cc/g0TfqZkq/Gallery-4.jpg"
+                                style="width:100%" onclick="currentSlide(4)">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="https://i.postimg.cc/Pxdd9ZkG/Gallery-5.jpg"
+                                style="width:100%" onclick="currentSlide(5)">
+                        </div>
+                        <div class="column">
+                        </div>
+                    </div>
+                </div>
             </div>
+            <script>
+                let index = 1;
+                showSlide(index);
+
+                function plusSlides(n) {
+                    showSlide(index += n);
+                }
+
+                function currentSlide(n) {
+                    showSlide(index = n);
+                }
+
+                function showSlide(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("demo");
+                    if (n > slides.length) { index = 1 }
+                    if (n < 1) { index = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[index - 1].style.display = "block";
+                    dots[index - 1].className += " active";
+                }
+            </script>
             <div id="Product">
-                <h1>Sharing The Heritage</h1>
-                <p>One of many pleasures of living in Indonesia is having opportunity to learn about and know better
+                <br><br><br>
+                <h1 style="text-align: left; font-weight:500;">Sharing The Heritage</h1>
+                <br><br>
+                <p
+                    style="color: rgb(131, 131, 131); font-family: 'Montserrat', sans-serif; font-weight: lighter; text-align: left;">
+                    One of many pleasures of living in Indonesia is having opportunity to learn about and know
+                    better
                     Indonesian arts and handicrafts.</p>
                 <br>
-                <p>We are excited to share the heritage through the making of rattan. Support the local artisans also to
-                    preserve Indonesia heritage</p>
+                <p
+                    style="color: rgb(131, 131, 131); font-family: 'Montserrat', sans-serif; font-weight: lighter; text-align: left;">
+                    We are excited to share the heritage through the making of rattan. Support the local artisans
+                    also to
+                    preserve Indonesia heritage</p><br><br>
 
-                <iframe width="420" height="315" src="https://www.youtube.com/embed/i533XFbBqiU"></iframe>
-                <br>
+                <iframe width="100%" height="800px" src="https://www.youtube.com/embed/i533XFbBqiU"></iframe>
+                <br><br><br><br><br>
 
-                <h1>DOWNLOAD</h1>
-                <a href="/assets/CATALOGUE .pdf" download="CATALOGUE">
-                    <button type="button">DOWNLOAD CATALOGUE</button>
-                </a>
+                <h1 style="text-align: center; font-weight:500;">DOWNLOAD</h1>
                 <br>
-                <a href="/assets/PRICELIST GEVA .pdf" download="PRICELIST">
-                    <button type="button">DOWNLOAD PRODUCT SHEET</button>
-                </a>
+                <br>
+                <img src="https://i.postimg.cc/8CQbJmS8/CATALOGUE-1.webp" style="width:100%; height: auto; filter: brightness(100%);">
+                <br><br>
+
+                <img src="https://i.postimg.cc/1Xt0hWpF/PRICELIST-GEVA-1.webp"
+                    style="width:100%; height: auto; filter: brightness(100%);">
+
+                <br><br>
+                <div class="download-button">
+                    <a href="/assets/CATALOGUE .pdf" download="CATALOGUE">
+                        <button type="button" class="btn">DOWNLOAD CATALOGUE</button>
+                    </a>
+                </div>
+                <br>
+                <br>
+                <div class="download-button">
+                    <a href="/assets/PRICELIST GEVA .pdf" download="PRICELIST">
+                        <button type="button" class="btn">DOWNLOAD PRODUCT SHEET</button>
+                    </a>
+                </div>
+
+
             </div>
-            <div id="Team">
-                <p>Eka Nurhana Via (0106012010231)</p>
-                <p>Kelas GMS-D</p>
+            <div id="Team" style="align-items: center;">
+                <br><br>
+                <p style="text-align: center;">Eka Nurhana Via (0106012010231)</p>
+                <p style="text-align: center;">Kelas GMS-D</p>
             </div>
-            <div id="Contact">
-                <div class="logo">G</div>
-                <p>Surabaya, Indonesia</p>
-                <p>+62 8517 1208 085</p>
-                <p>gevafurniture@gmail.com</p>
-            </div>
+
         </div>
     </main>
-    <footer>
-        <p>Copyright &#169; 2023 Geva Rattan | Home Decor. All Rights Reserved.</p>
+    <footer class="footer">
+        <div class="footer-container">
+            <div id="Contact" style="align-items: center;">
+                <br><br><br><br><br><br><br><br>
+                <div class="logo" style="font-size: 52px;">G</div>
+                <br><br><br><br><br><br>
+
+                <p
+                    style="color: rgb(131, 131, 131); font-family: 'Montserrat', sans-serif; font-weight: lighter; text-align: center">
+                    Surabaya, Indonesia</p>
+                <p
+                    style="color: rgb(131, 131, 131); font-family: 'Montserrat', sans-serif; font-weight: lighter; text-align: center">
+                    +62 8517 1208 085</p>
+                <p
+                    style="color: rgb(131, 131, 131); font-family: 'Montserrat', sans-serif; font-weight: lighter; text-align: center">
+                    gevafurniture@gmail.com</p>
+                <div class="social-media" style="display: flex; align-items: center;   justify-content: center;">
+                    <a class="btn-social-media" href="mailto:gevafurniture@gmail.com" target="_blank"
+                        style="margin: 10px;"><i class="fa-regular fa-envelope" style="color: black;"></i></a>
+                    <a class="btn-social-media" href="https://www.instagram.com/gevarattan" target="_blank"
+                        style="margin: 10px;"><i class="fa-brands fa-instagram" style="color: black; "></i></a>
+                    <a class="btn-social-media" href="https://shopee.co.id/gevarattan" target="_blank"
+                        style="margin: 10px; "><img src="https://img.icons8.com/ios/50/shopee.png" style="width: 14px;
+                            height: 16px;" /></a>
+                    <a class="btn-social-media" href="https://www.tokopedia.com/gevarattan" target="_blank"
+                        style="margin: 10px;"><img
+                            src="https://www.freepnglogos.com/uploads/logo-tokopedia-png/tokopedia-logo-outline-10.png"
+                            style="width: 14px;
+                            height: 16px;" /></a>
+                    <a href="https://wa.me/6285171208085" target="_blank"><button id="myBtn"><i
+                                    class="fa-brands fa-whatsapp"></i></button></i></a>
+                        <script>
+                            let mybutton = document.getElementById("myBtn");
+                            window.onscroll = function () { scrollFunction() };
+
+                            function scrollFunction() {
+                                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                                    mybutton.style.display = "block";
+                                } else {
+                                    mybutton.style.display = "none";
+                                }
+                            } 
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+            <br><br><br><br>
+            <p
+                style="color: rgb(131, 131, 131); font-family:'Times New Roman', Times, serif; font-weight: lighter; text-align: center">
+                Copyright &#169; 2023 Geva Rattan | Home Decor. All Rights Reserved.</p>
+            <br><br>
+        </div>
+
     </footer>
 </body>
 

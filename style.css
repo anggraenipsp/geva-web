@@ -2,11 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "inter";
+  font-family: 'Playfair', serif;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,200&family=Playfair:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+
 body {
-  font-family: cursive;
+  font-family: 'Playfair', serif;
 }
 
 a {
@@ -22,16 +24,19 @@ li {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: burlywood;
-  color: #F4ECE7;
+  background-color: #f8e4db;
+  color: #141414;
 }
 
 .nav-links a {
-  color: #F4ECE7;
+  color: #141414;
 }
 
 .logo {
   font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu {
@@ -60,19 +65,148 @@ input[type=checkbox] {
   user-select: none;
 }
 
+.text {
+  color: #e9e9e9;
+  position: absolute;
+  bottom: 55%;
+  left: 10%;
+  text-align: left;
+}
+
+.img-header {
+  width: 100%;
+  max-height: 550px;
+  object-fit: cover;
+  object-position: bottom;
+  filter: brightness(70%);
+}
+
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+  max-height: 200px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.non-slide {
+  display: none;
+}
+
+.btn {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.download-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  margin-inline: 16px;
+  align-items: center;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  padding-inline: 17px;
+  border-radius: 100%;
+  font-size: 18px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
 @media (max-width: 768px) {
+
   .menu {
     display: none;
     position: absolute;
-    background-color: burlywood;
+    background-color: #f8e4db;
     right: 0;
     left: 0;
     padding: 16px 0;
+    z-index: 90;
   }
 
   .menu li:hover {
     display: inline-block;
-    background-color: burlywood;
+    background-color: none;
     transition: 0.3s ease;
   }
 
@@ -97,8 +231,14 @@ input[type=checkbox] {
   }
 
   body {
-    font-family: Verdana, sans-serif;
+    font-family: 'Playfair', serif;
     margin: 0
+  }
+
+  .text {
+    position: absolute;
+    bottom: 55%;
+    left: 10%;
   }
 
   .slides {
@@ -106,13 +246,33 @@ input[type=checkbox] {
   }
 
   img {
-    vertical-align: middle;
+    vertical-align: center;
+    width: 14px;
+    height: 400px;
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+
+  .img-aboutUs {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  iframe {
+    width: 100%;
+    height: 190px;
   }
 
   .slideshow-container {
-    max-width: 1000px;
+    max-width: 100%;
     position: relative;
     margin: auto;
+
+    object-fit: cover;
+    object-position: bottom;
   }
 
   .dot {
@@ -120,7 +280,7 @@ input[type=checkbox] {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: burlywood;
+    background-color: rgb(54, 54, 54);
     border-color: black;
     border-radius: 50%;
     display: inline-block;
@@ -130,12 +290,39 @@ input[type=checkbox] {
   .active,
   .dot:hover {
     border-color: black;
-    background-color: pink;
+    background-color: #b18e7e;
   }
 
   .fade {
     animation-name: fade;
     animation-duration: 1.5s;
+  }
+
+  .row {
+    display: none;
+  }
+
+  .next {
+    display: none;
+  }
+
+  .prev {
+    display: none;
+  }
+
+  .mySlides {
+    display: none;
+  }
+
+  .non-slide {
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  .footer-container {
+    padding-bottom: 30%;
   }
 
   @keyframes fade {
@@ -147,4 +334,5 @@ input[type=checkbox] {
       opacity: 1
     }
   }
+
 }
